@@ -38,7 +38,7 @@
     <script type="text/javascript" src="${ctxPath}/static/js/jquery-ui-timepicker-addon.min.js" ></script>
     <script type="text/javascript" src="${ctxPath}/static/js/script.js" ></script>
     <script type="text/javascript" src="${ctxPath}/static/js/stupidtable.min.js" ></script>
-    <title>SteVe - Steckdosenverwaltung</title>
+    <title>AZEnergy</title>
 </head>
 <body>
 <div class="main">
@@ -70,9 +70,9 @@
                         </ul>
                     </li>
                     <li><a href="${ctxPath}/manager/settings">SETTINGS</a></li>
-                    <li><a href="${ctxPath}/manager/log">LOG</a></li>
+                    <li><a target="_blank"href="${ctxPath}/manager/log">LOG</a></li>
                     <li><a href="${ctxPath}/manager/about">ABOUT</a></li>
-                    <li><a href="${ctxPath}/manager/signout">SIGN OUT</a></li>
+                    <li><a href="${ctxPath}/manager/signout">LOG OUT</a></li>
                 </ul>
             </div>
         </div>

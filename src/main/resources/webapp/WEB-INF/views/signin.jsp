@@ -29,7 +29,7 @@
 	<link rel="icon" href="${ctxPath}/static/images/favicon.ico" type="image/x-icon" />
 	<link rel="shortcut icon" href="${ctxPath}/static/images/favicon.ico" type="image/x-icon" />
 	<link rel="stylesheet" type="text/css" href="${ctxPath}/static/css/style.css">
-	<title>SteVe - Steckdosenverwaltung</title>
+	<title>AZEnergy Login</title>
 </head>
 <body>
 <div class="main">
@@ -40,10 +40,10 @@
         <div class="error">Your name or password is incorrect.</div>
     </c:if>
     <div class="content">
-        <section><span>Sign In</span></section>
+        <section><span>Log In</span></section>
         <form method="POST" action="${ctxPath}/manager/signin">
             <table class="userInput">
-                <tr><td>Name:</td><td><input type="text" name="username" id="username" required /></td></tr>
+                <tr><td>Username:</td><td><input type="text" name="username" id="username" required /></td></tr>
                 <tr><td>Password:</td><td><input type="password" name="password" id="password" required /></td></tr>
                 <tr><td></td><td id="add_space"><input type="submit" value="Sign In"></td></tr>
             </table>
