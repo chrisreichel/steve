@@ -45,7 +45,7 @@
 
     <form class="form-signin" method="POST" action="${ctxPath}/manager/signin">
         <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-        <img class="mb-4" src="${ctxPath}/static/images/logo2.png" alt="" width="132" height="132">
+        <img class="mb-4" src="${ctxPath}/static/images/logo-tranp.png" alt="" width="112" height="112">
         <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
         <label for="inputEmail" class="sr-only">Username</label>
         <input type="text" name="username" id="inputEmail" class="form-control" placeholder="Username" required autofocus>
