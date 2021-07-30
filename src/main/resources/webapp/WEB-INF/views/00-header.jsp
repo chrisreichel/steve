@@ -30,50 +30,69 @@
 <head>
     <link rel="icon" href="${ctxPath}/static/images/favicon.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="${ctxPath}/static/images/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" type="text/css" href="${ctxPath}/static/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="${ctxPath}/static/css/jquery-ui.min.css">
     <link rel="stylesheet" type="text/css" href="${ctxPath}/static/css/jquery-ui-timepicker-addon.min.css">
-    <script type="text/javascript" src="${ctxPath}/static/js/jquery-2.0.3.min.js" ></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script type="text/javascript" src="${ctxPath}/static/js/jquery-ui.min.js" ></script>
     <script type="text/javascript" src="${ctxPath}/static/js/jquery-ui-timepicker-addon.min.js" ></script>
-    <script type="text/javascript" src="${ctxPath}/static/js/script.js" ></script>
     <script type="text/javascript" src="${ctxPath}/static/js/stupidtable.min.js" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <style>
+        /* ============ desktop view ============ */
+        @media all and (min-width: 992px) {
+            .navbar .nav-item .dropdown-menu{ display: none; }
+            .navbar .nav-item:hover .nav-link{   }
+            .navbar .nav-item:hover .dropdown-menu{ display: block; }
+            .navbar .nav-item .dropdown-menu{ margin-top:0; }
+        }
+        /* ============ desktop view .end// ============ */
+    </style>
     <title>AZEnergy</title>
 </head>
 <body>
-<div class="main">
-    <div class="top-banner">
-        <div class="container">
-            <a href="${ctxPath}/manager/home"><img src="${ctxPath}/static/images/logo2.png" height="80"></a>
-        </div>
-    </div>
-    <div class="top-menu">
-        <div class="container">
-                <ul class="navigation">
-                    <li><a href="${ctxPath}/manager/home">HOME</a></li>
-                    <li><a>DATA MANAGEMENT &raquo;</a>
-                        <ul>
-                            <li><a href="${ctxPath}/manager/chargepoints">CHARGE POINTS</a></li>
-                            <li><a href="${ctxPath}/manager/ocppTags">OCPP TAGS</a></li>
-                            <li><a href="${ctxPath}/manager/users">USERS</a></li>
-                            <li><a href="${ctxPath}/manager/chargingProfiles">CHARGING PROFILES</a></li>
-                            <li><a href="${ctxPath}/manager/reservations">RESERVATIONS</a></li>
-                            <li><a href="${ctxPath}/manager/transactions">TRANSACTIONS</a></li>
+<div class="container">
+
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="${ctxPath}/manager/chargepoints">
+                <img src="${ctxPath}/static/images/logo2.png" alt="" width="52" height="52">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav"  aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="main_nav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"> <a class="nav-link" href="${ctxPath}/manager">Home </a> </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link  dropdown-toggle" href="#" data-bs-toggle="dropdown">  Data management  </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="${ctxPath}/manager/chargepoints">CHARGE POINTS</a></li>
+                            <li><a class="dropdown-item" href="${ctxPath}/manager/ocppTags">OCPP TAGS</a></li>
+                            <li><a class="dropdown-item" href="${ctxPath}/manager/users">USERS</a></li>
+                            <li><a class="dropdown-item" href="${ctxPath}/manager/chargingProfiles">CHARGING PROFILES</a></li>
+                            <li><a class="dropdown-item" href="${ctxPath}/manager/reservations">RESERVATIONS</a></li>
+                            <li><a class="dropdown-item" href="${ctxPath}/manager/transactions">TRANSACTIONS</a></li>
                         </ul>
                     </li>
-                    <li><a>OPERATIONS &raquo;</a>
-                        <ul>
-                            <li><a href="${ctxPath}/manager/operations/v1.2">OCPP v1.2</a></li>
-                            <li><a href="${ctxPath}/manager/operations/v1.5">OCPP v1.5</a></li>
-                            <li><a href="${ctxPath}/manager/operations/v1.6">OCPP v1.6</a></li>
-                            <li><a href="${ctxPath}/manager/operations/tasks">Tasks</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link  dropdown-toggle" href="#" data-bs-toggle="dropdown">  Operations  </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="${ctxPath}/manager/operations/v1.2">OCPP v1.2</a></li>
+                            <li><a class="dropdown-item" href="${ctxPath}/manager/operations/v1.5">OCPP v1.5</a></li>
+                            <li><a class="dropdown-item" href="${ctxPath}/manager/operations/v1.6">OCPP v1.6</a></li>
+                            <li><a class="dropdown-item" href="${ctxPath}/manager/operations/tasks">Tasks</a></li>
                         </ul>
                     </li>
-                    <li><a href="${ctxPath}/manager/settings">SETTINGS</a></li>
-                    <li><a target="_blank"href="${ctxPath}/manager/log">LOG</a></li>
-                    <li><a href="${ctxPath}/manager/about">ABOUT</a></li>
-                    <li><a href="${ctxPath}/manager/signout">LOG OUT</a></li>
+                    <li class="nav-item"><a class="nav-link" href="${ctxPath}/manager/settings"> Settings </a></li>
+                    <li class="nav-item"><a class="nav-link" target="_blank"href="${ctxPath}/manager/log"> Logs </a></li>
+                    <li class="nav-item"><a class="nav-link" href="${ctxPath}/manager/about"> About </a></li>
+                    <li class="nav-item"><a class="nav-link" href="${ctxPath}/manager/signout"> Log out </a></li>
                 </ul>
-            </div>
-        </div>
-    <div class="main-wrapper">
+            </div> <!-- navbar-collapse.// -->
+        </div> <!-- container-fluid.// -->
+    </nav>
+
+    <span>
+        <hr/>
+    </span>

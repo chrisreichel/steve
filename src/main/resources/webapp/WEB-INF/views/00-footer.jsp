@@ -18,9 +18,12 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 --%>
-</div></div>
-<div class="footer">
-
-</div>
+        <div class="footer">
+            <hr/>
+            <span class="border">
+                <img src="${ctxPath}/static/images/azb.png" >
+            </span>
+        </div>
+    </div>
 </body>
 </html>

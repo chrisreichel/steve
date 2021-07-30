@@ -104,6 +104,7 @@
         </resources>
 
         <plugins>
+            <!--
             <plugin>
                 <groupId>com.mycila</groupId>
                 <artifactId>license-maven-plugin</artifactId>
@@ -128,7 +129,6 @@
                         <exclude>**/*.yaml</exclude>
                         <exclude>**/*.PNG</exclude>
                         <exclude>**/Dockerfile</exclude>
-                        <!-- <exclude>**/*.jsp</exclude> -->
 
                     </excludes>
                     <mapping>
@@ -143,6 +143,7 @@
                     </execution>
                 </executions>
             </plugin>
+
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -164,6 +165,7 @@
                     </execution>
                 </executions>
             </plugin>
+            -->
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.1</version>
@@ -174,6 +176,7 @@
             </plugin>
 
             <!-- Static analysis and check style -->
+            <!--
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-pmd-plugin</artifactId>
@@ -221,6 +224,7 @@
                     <failOnUnableToExtractRepoInfo>false</failOnUnableToExtractRepoInfo>
                 </configuration>
             </plugin>
+            -->
 
             <!-- Read from main.properties the DB configuration -->
             <plugin>

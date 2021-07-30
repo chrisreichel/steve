@@ -38,8 +38,10 @@
 
     <body class="text-center">
     <c:if test="${param.error != null}">
-        <div class="alert alert-success" role="alert">
-            Your username or password is incorrect.
+        <div class="container">
+            <div class="alert alert-danger" role="alert">
+                Your username or password is incorrect.
+            </div>
         </div>
     </c:if>
 

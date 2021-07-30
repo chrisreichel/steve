@@ -19,72 +19,127 @@
 
 --%>
 <%@ include file="00-header.jsp" %>
-<div class="content">
-<div class="tileWrapper">
-	<a class="tileRow1" href="${ctxPath}/manager/chargepoints">
-		Number of<br>Charge Points
-		<span class="base formatNumber">${stats.numChargeBoxes}</span>
-	</a>
-	<a class="tileRow1" href="${ctxPath}/manager/ocppTags">
-		Number of<br>OCPP Tags
-		<span class="base formatNumber">${stats.numOcppTags}</span>
-	</a>
-	<a class="tileRow1" href="${ctxPath}/manager/users">
-		Number of<br>Users
-		<span class="base formatNumber">${stats.numUsers}</span>
-	</a>
-	<a class="tileRow1" href="${ctxPath}/manager/reservations">
-		Number of<br>Active Reservations
-		<span class="base formatNumber">${stats.numReservations}</span>
-	</a>
-	<a class="tileRow1" href="${ctxPath}/manager/transactions">
-		Number of<br>Active Transactions
-		<span class="base formatNumber">${stats.numTransactions}</span>
-	</a>
-	<a class="tileRow1" href="${ctxPath}/manager/home/ocppJsonStatus">
-		Number of Connected<br>JSON Charge Points
-		<span class="baseTable">
-			<span class="baseRow">
-				<span class="baseCell">OCPP 1.2 :</span>
-				<span class="baseCell formatNumber">${stats.numOcpp12JChargeBoxes}</span>
-			</span>
-			<span class="baseRow">
-				<span class="baseCell">OCPP 1.5 :</span>
-				<span class="baseCell formatNumber">${stats.numOcpp15JChargeBoxes}</span>
-			</span>
-			<span class="baseRow">
-				<span class="baseCell">OCPP 1.6 :</span>
-				<span class="baseCell formatNumber">${stats.numOcpp16JChargeBoxes}</span>
-			</span>
-		</span>
-	</a>
-	<a class="tileRow1" href="${ctxPath}/manager/chargepoints">
-		Received Heartbeats
-		<span class="baseTable">
-			<span class="baseRow">
-				<span class="baseCell">Today :</span>
-				<span class="baseCell formatNumber">${stats.heartbeatToday}</span>
-			</span>
-			<span class="baseRow">
-				<span class="baseCell">Yesterday :</span>
-				<span class="baseCell formatNumber">${stats.heartbeatYesterday}</span>
-			</span>
-			<span class="baseRow">
-				<span class="baseCell">Earlier :</span>
-				<span class="baseCell formatNumber">${stats.heartbeatEarlier}</span>
-			</span>
-		</span>
-	</a>
-	<a class="tileRow1" href="${ctxPath}/manager/home/connectorStatus">
-		Connector Status
-		<span class="baseTable">
-			<c:forEach items="${stats.statusCountMap}" var="it">
-				<span class="baseRow">
-					<span class="baseCell">${it.key} :</span>
-					<span class="baseCell formatNumber">${it.value}</span>
-				</span>
-			</c:forEach>
-		</span>
-	</a>
-</div></div>
+
+	<div class="row">
+
+		<div class="col">
+			<div class="card">
+				<div class="card-header">
+					<h5>Data Management Stats</h5>
+				</div>
+				<div class="card-body">
+					<ul class="list-group">
+						<li class="list-group-item d-flex justify-content-between align-items-center">
+							<a href="${ctxPath}/manager/chargepoints">
+								Number of chargepoints
+								<p class="badge badge-light">${stats.numChargeBoxes}</p>
+							</a>
+						</li>
+						<li class="list-group-item d-flex justify-content-between align-items-center">
+							<a href="${ctxPath}/manager/ocppTags">
+								Number of OCPP Tags
+								<span class="badge badge-light">${stats.numOcppTags}</span>
+							</a>
+						</li>
+						<li class="list-group-item d-flex justify-content-between align-items-center">
+							<a href="${ctxPath}/manager/users">
+								Number of users
+								<span class="badge badge-light">${stats.numUsers}</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="col">
+			<div class="card">
+				<div class="card-header">
+					<h5>Chargepoint Activity</h5>
+				</div>
+				<div class="card-body">
+					<ul class="list-group">
+						<li class="list-group-item d-flex justify-content-between align-items-center">
+							<a href="${ctxPath}/manager/chargepoints">Received Heartbeats</a>
+								<table class="table table-sm table-hoover">
+									<tbody>
+									<tr>
+										<td>Today</td>
+										<td>${stats.heartbeatToday}</td>
+									</tr>
+									<tr>
+										<td>Yesterday</td>
+										<td>${stats.heartbeatYesterday}</td>
+									</tr>
+									<tr>
+										<td>Earlier</td>
+										<td>${stats.heartbeatEarlier}</td>
+									</tr>
+									</tbody>
+								</table>
+						</li>
+						<li class="list-group-item d-flex justify-content-between align-items-center">
+							<a href="${ctxPath}/manager/home/ocppJsonStatus">Connected JSON Charge Points</a>
+							<table class="table table-sm table-hoover">
+								<tbody>
+								<tr>
+									<td>OCPP 1.2</td>
+									<td>${stats.numOcpp12JChargeBoxes}</td>
+								</tr>
+								<tr>
+									<td>OCPP 1.5</td>
+									<td>${stats.numOcpp15JChargeBoxes}</td>
+								</tr>
+								<tr>
+									<td>OCPP 1.6</td>
+									<td>${stats.numOcpp16JChargeBoxes}</td>
+								</tr>
+								</tbody>
+							</table>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="col">
+			<div class="card">
+				<div class="card-header">
+					<h5 class="card-title">Usage Statistics</h5>
+				</div>
+				<div class="card-body">
+					<ul class="list-group">
+						<li class="list-group-item d-flex justify-content-between align-items-center">
+							<a href="${ctxPath}/manager/reservations">
+								Number of Active Reservations
+								<span class="badge badge-light">${stats.numReservations}</span>
+							</a>
+						</li>
+						<li class="list-group-item d-flex justify-content-between align-items-center">
+							<a href="${ctxPath}/manager/transactions">
+								Number of Active Transactions
+								<span class="badge badge-light">${stats.numTransactions}</span>
+							</a>
+						</li>
+						<li class="list-group-item d-flex justify-content-between align-items-center">
+							<a href="${ctxPath}/manager/home/connectorStatus">Connector Status</a>
+							<table class="table table-sm table-hoover">
+								<tbody>
+								<c:forEach items="${stats.statusCountMap}" var="it">
+								<tr>
+									<td>${it.key}</td>
+									<td>${it.value}</td>
+								</tr>
+								</c:forEach>
+								</tbody>
+							</table>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+
 <%@ include file="00-footer.jsp" %>
