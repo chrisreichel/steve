@@ -27,7 +27,7 @@
 <div class="content"><div>
     <section><span>User Overview</span></section>
     <form:form action="${ctxPath}/manager/users/query" method="get" modelAttribute="params">
-        <table class="userInput">
+        <table class="table table-sm">
             <tr>
                 <td>User ID:</td>
                 <td><form:input path="userPk"/></td>
@@ -47,13 +47,13 @@
             <tr>
                 <td></td>
                 <td id="add_space">
-                    <input type="submit" value="Get">
+                    <input type="submit" class="btn btn-sm btn-primary" value="Get">
                 </td>
             </tr>
         </table>
     </form:form>
     <br>
-    <table class="res action">
+    <table class="res action table table-sm">
         <thead>
             <tr>
                 <th data-sort="int">User ID</th>
@@ -63,7 +63,7 @@
                 <th data-sort="string">E-Mail</th>
                 <th>
                     <form:form action="${ctxPath}/manager/users/add" method="get">
-                        <input type="submit" class="blueSubmit" value="Add New">
+                        <input type="submit" class="btn btn-sm btn-primary" class="blueSubmit" value="Add New">
                     </form:form>
                 </th>
             </tr>
@@ -81,7 +81,7 @@
                 <td>${cr.email}</td>
                 <td>
                     <form:form action="${ctxPath}/manager/users/delete/${cr.userPk}">
-                        <input type="submit" class="redSubmit" value="Delete">
+                        <input type="submit" class="btn btn-sm btn-danger" value="Delete">
                     </form:form>
                 </td>
             </tr>

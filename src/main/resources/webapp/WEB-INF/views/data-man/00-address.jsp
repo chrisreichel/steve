@@ -19,11 +19,11 @@
 
 --%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-<table class="userInput">
+<table class="table table-sm">
 	<thead><tr><th>Address</th><th></th></thead>
-	<tr><td>Street:</td><td><form:input path="address.street"/></td></tr>
-	<tr><td>House Number:</td><td><form:input path="address.houseNumber"/></td></tr>
-	<tr><td>Zip code:</td><td><form:input path="address.zipCode"/></td></tr>
-	<tr><td>City:</td><td><form:input path="address.city"/></td></tr>
-	<tr><td>Country:</td><td><form:select path="address.country" items="${countryCodes}"/></td></tr>
+	<tr><td>Street:</td><td><form:input path="address.street" cssClass="form-control form-control-sm"/></td></tr>
+	<tr><td>House Number:</td><td><form:input path="address.houseNumber" cssClass="form-control form-control-sm"/></td></tr>
+	<tr><td>Zip code:</td><td><form:input path="address.zipCode" cssClass="form-control form-control-sm"/></td></tr>
+	<tr><td>City:</td><td><form:input path="address.city" cssClass="form-control form-control-sm"/></td></tr>
+	<tr><td>Country:</td><td><form:select path="address.country" items="${countryCodes}" cssClass="form-control form-control-sm"/></td></tr>
 </table>

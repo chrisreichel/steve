@@ -51,6 +51,6 @@
             If selected and the update type is <b>FULL</b>, an empty list will be sent.<br>
             As a result, the charge point will remove all idTags from its list.
         </i></td><td></td></tr>
-        <tr><td></td><td><div class="submit-button"><input type="submit" value="Perform"></div></td></tr>
+        <tr><td></td><td><div class="submit-button"><input type="submit" class="btn btn-primary" value="Perform"></div></td></tr>
     </table>
 </form:form>

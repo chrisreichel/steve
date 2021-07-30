@@ -39,7 +39,7 @@
     <div>
         <section><span>Charging Profile Details</span></section>
 
-        <table class="userInput">
+        <table class="table table-sm">
             <thead><tr><th>Related Data Pages</th><th></th></thead>
             <tbody>
             <tr>

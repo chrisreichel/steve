@@ -36,7 +36,7 @@ Transactions
 </a>
 </span></section>
     <form:form action="${ctxPath}/manager/transactions/query" method="get" modelAttribute="params">
-        <table class="userInput">
+        <table class="table table-sm">
             <tr>
                 <td>Transaction ID:</td>
                 <td><form:input path="transactionPk"/></td>
@@ -86,14 +86,14 @@ Transactions
             <tr>
                 <td></td>
                 <td id="add_space">
-                    <input type="submit" value="Get">
+                    <input type="submit" class="btn btn-sm btn-primary" value="Get">
                 </td>
             </tr>
         </table>
     </form:form>
     <br>
 
-    <table class="res action">
+    <table class="res action table table-sm">
         <thead>
             <tr>
                 <th data-sort="int">Transaction ID</th>
@@ -123,7 +123,7 @@ Transactions
                 <td>
                     <c:if test="${empty ta.stopValue}">
                         <form:form action="${ctxPath}/manager/transactions/stop/${ta.id}">
-                            <input type="submit" class="redSubmit" title="Manually stop this active transaction" value="Stop">
+                            <input type="submit" class="btn btn-sm btn-primary" class="redSubmit" title="Manually stop this active transaction" value="Stop">
                         </form:form>
                     </c:if>
                 </td>

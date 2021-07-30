@@ -53,11 +53,11 @@
                     <td data-sort-value="${item.lastAttemptTimestamp.millis}">${item.lastAttemptTimestamp}</td>
                     <td>
                         <form:form cssClass="inline" action="${ctxPath}/manager/chargepoints/unknown/add/${item.key}/" method="post">
-                            <input type="submit" class="blueSubmit" value="Add"/>
+                            <input type="submit" class="btn btn-sm btn-primary" class="blueSubmit" value="Add"/>
                         </form:form>
                         &nbsp;
                         <form:form cssClass="inline" action="${ctxPath}/manager/chargepoints/unknown/remove/${item.key}/" method="post">
-                            <input type="submit" class="redSubmit" value="Forget"/>
+                            <input type="submit" class="btn btn-sm btn-primary" class="redSubmit" value="Forget"/>
                         </form:form>
                     </td>
                 </tr>
@@ -74,7 +74,7 @@
     </span></section>
     <div id="overview">
         <form:form action="${ctxPath}/manager/chargepoints/query" method="get" modelAttribute="params">
-            <table class="userInput">
+            <table class="table table-sm">
                 <tr>
                     <td>ChargeBox ID:</td>
                     <td><form:input path="chargeBoxId"/></td>
@@ -101,13 +101,13 @@
                 <tr>
                     <td></td>
                     <td id="add_space">
-                        <input type="submit" value="Get">
+                        <input type="submit" class="btn btn-sm btn-primary" value="Get">
                     </td>
                 </tr>
             </table>
         </form:form>
         <br>
-        <table class="res action">
+        <table class="res action table table-sm">
             <thead>
             <tr>
                 <th data-sort="string">ChargeBox ID</th>
@@ -116,7 +116,7 @@
                 <th data-sort="date">Last Heartbeat</th>
                 <th>
                     <form:form action="${ctxPath}/manager/chargepoints/add" method="get">
-                        <input type="submit" class="blueSubmit" value="Add New">
+                        <input type="submit" class="btn btn-sm btn-primary" class="blueSubmit" value="Add New">
                     </form:form>
                 </th>
             </tr>
@@ -129,7 +129,7 @@
                     <td data-sort-value="${cp.lastHeartbeatTimestampDT.millis}">${cp.lastHeartbeatTimestamp}</td>
                     <td>
                         <form:form action="${ctxPath}/manager/chargepoints/delete/${cp.chargeBoxPk}">
-                            <input type="submit" class="redSubmit" value="Delete">
+                            <input type="submit" class="btn btn-sm btn-danger" class="redSubmit" value="Delete">
                         </form:form>
                     </td>
                 </tr>

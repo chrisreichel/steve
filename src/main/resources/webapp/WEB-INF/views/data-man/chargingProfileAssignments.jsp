@@ -28,7 +28,7 @@
     <section><span>Charging Profile Assignments</span></section>
 
     <form:form action="${ctxPath}/manager/chargingProfiles/assignments" method="get" modelAttribute="params">
-        <table class="userInput">
+        <table class="table table-sm">
             <tr>
                 <td>ChargeBox ID:</td>
                 <td><form:select path="chargeBoxId">
@@ -52,7 +52,7 @@
             <tr>
                 <td></td>
                 <td id="add_space">
-                    <input type="submit" value="Get">
+                    <input type="submit" class="btn btn-sm btn-primary" value="Get">
                 </td>
             </tr>
         </table>

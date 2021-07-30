@@ -37,7 +37,7 @@
 <div class="content"><div>
     <section><span>OCPP Tag Details</span></section>
 
-    <table class="userInput">
+    <table class="table table-sm">
         <thead><tr><th>See Operations</th><th></th></thead>
         <tbody>
         <tr>

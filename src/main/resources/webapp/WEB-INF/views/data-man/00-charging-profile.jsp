@@ -19,7 +19,7 @@
 
 --%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-<table class="userInput">
+<table class="table table-sm">
     <thead><tr><th>Details</th><th></th></thead>
     <tr><td>Description:</td><td><form:input path="description"/></td></tr>
     <tr><td>Stack Level (integer):</td><td><form:input path="stackLevel"/></td></tr>
@@ -79,18 +79,18 @@
             <td><form:input path="schedulePeriodMap[${schedulePeriodMap.key}].startPeriodInSeconds"/></td>
             <td><form:input path="schedulePeriodMap[${schedulePeriodMap.key}].powerLimit"/></td>
             <td><form:input path="schedulePeriodMap[${schedulePeriodMap.key}].numberPhases" placeholder="if empty, 3 will be assumed"/></td>
-            <td><input type="button" class="removeRow" value="Delete"></td>
+            <td><input type="button" class="btn btn-sm btn-danger" value="Delete"></td>
         </tr>
     </c:forEach>
     </tbody>
 </table>
 
-<table class="userInput">
+<table class="table table-sm">
     <tr>
         <td></td>
         <td id="add_space">
-            <input type="submit" name="${submitButtonName}" value="${submitButtonValue}">
-            <input type="submit" name="backToOverview" value="Back to Overview">
+            <input type="submit" class="btn btn-sm btn-primary" name="${submitButtonName}" value="${submitButtonValue}">
+            <input type="submit" class="btn btn-sm btn-primary" name="backToOverview" value="Back to Overview">
         </td>
     </tr>
 </table>

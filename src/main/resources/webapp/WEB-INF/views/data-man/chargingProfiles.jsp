@@ -29,7 +29,7 @@
     <section><span>Charging Profile Overview</span></section>
     <div id="overview">
         <form:form action="${ctxPath}/manager/chargingProfiles/query" method="get" modelAttribute="params">
-            <table class="userInput">
+            <table class="table table-sm">
                 <tr>
                     <td>Charging Profile ID (integer):</td>
                     <td><form:input path="chargingProfilePk"/></td>
@@ -71,13 +71,13 @@
                 <tr>
                     <td></td>
                     <td id="add_space">
-                        <input type="submit" value="Get">
+                        <input type="submit" class="btn btn-sm btn-primary" value="Get">
                     </td>
                 </tr>
             </table>
         </form:form>
         <br>
-        <table class="res action">
+        <table class="res action table table-sm">
             <thead>
             <tr>
                 <th data-sort="string">Charging Profile ID</th>
@@ -90,7 +90,7 @@
                 <th data-sort="date">Valid To</th>
                 <th>
                     <form:form action="${ctxPath}/manager/chargingProfiles/add" method="get">
-                        <input type="submit" class="blueSubmit" value="Add New">
+                        <input type="submit" class="btn btn-sm btn-primary" class="blueSubmit" value="Add New">
                     </form:form>
                 </th>
             </tr>
@@ -108,7 +108,7 @@
                     <td data-sort-value="${cp.validTo.millis}">${cp.validTo}</td>
                     <td>
                         <form:form action="${ctxPath}/manager/chargingProfiles/delete/${cp.chargingProfilePk}">
-                            <input type="submit" class="redSubmit" value="Delete">
+                            <input type="submit" class="btn btn-sm btn-danger" value="Delete">
                         </form:form>
                     </td>
                 </tr>

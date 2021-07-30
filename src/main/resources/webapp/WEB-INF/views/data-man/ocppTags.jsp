@@ -53,11 +53,11 @@
                     <td data-sort-value="${item.lastAttemptTimestamp.millis}">${item.lastAttemptTimestamp}</td>
                     <td class="inlineWrapper">
                         <form:form cssClass="inline" action="${ctxPath}/manager/ocppTags/unknown/add/${item.key}/" method="post">
-                            <input type="submit" class="blueSubmit" value="Add"/>
+                            <input type="submit" class="btn btn-sm btn-primary" class="blueSubmit" value="Add"/>
                         </form:form>
                         &nbsp;
                         <form:form cssClass="inline" action="${ctxPath}/manager/ocppTags/unknown/remove/${item.key}/" method="post">
-                            <input type="submit" class="redSubmit" value="Forget"/>
+                            <input type="submit" class="btn btn-sm btn-primary" class="redSubmit" value="Forget"/>
                         </form:form>
                     </td>
                 </tr>
@@ -74,7 +74,7 @@
     </span></section>
     <div id="overview">
         <form:form action="${ctxPath}/manager/ocppTags/query" method="get" modelAttribute="params">
-            <table class="userInput">
+            <table class="table table-sm">
                 <tr>
                     <td>ID Tag:</td>
                     <td><form:select path="idTag">
@@ -115,13 +115,13 @@
                 <tr>
                     <td></td>
                     <td id="add_space">
-                        <input type="submit" value="Get">
+                        <input type="submit" class="btn btn-sm btn-primary" value="Get">
                     </td>
                 </tr>
             </table>
         </form:form>
         <br>
-        <table class="res action">
+        <table class="res action table table-sm">
             <thead>
             <tr>
                 <th data-sort="string">ID Tag</th>
@@ -131,7 +131,7 @@
                 <th data-sort="string">Blocked?</th>
                 <th>
                     <form:form action="${ctxPath}/manager/ocppTags/add" method="get">
-                        <input type="submit" class="blueSubmit" value="Add New"/>
+                        <input type="submit" class="btn btn-sm btn-primary" class="blueSubmit" value="Add New"/>
                     </form:form>
                 </th>
             </tr>
@@ -150,7 +150,7 @@
                     <td>${item.blocked}</td>
                     <td>
                         <form:form action="${ctxPath}/manager/ocppTags/delete/${item.ocppTagPk}">
-                            <input type="submit" class="redSubmit" value="Delete">
+                            <input type="submit" class="btn btn-sm btn-danger" value="Delete">
                         </form:form>
                     </td>
                 </tr>

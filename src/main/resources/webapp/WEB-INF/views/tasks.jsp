@@ -29,7 +29,7 @@
         Request Tasks <a class="tooltip" href="#"><img src="${ctxPath}/static/images/info.png" style="vertical-align:middle"><span>Click on Task IDs for detailed task information.</span></a>
     </span></section>
     <form:form action="${ctxPath}/manager/operations/tasks">
-        <input type="submit" value="Delete Finished"/>
+        <input type="submit" class="btn btn-warning" value="Delete Finished"/>
     </form:form>
     <br>
     <table class="res">

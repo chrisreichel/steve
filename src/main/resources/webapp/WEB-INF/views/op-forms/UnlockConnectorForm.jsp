@@ -22,10 +22,10 @@
     <section><span>Charge Points with OCPP ${opVersion}</span></section>
     <%@ include file="../00-cp-single.jsp" %>
     <section><span>Parameters</span></section>
-    <table class="userInput">
+    <table class="table table-sm">
         <tr><td>Connector ID:</td>
             <td><form:select path="connectorId" disabled="true" /></td>
         </tr>
-        <tr><td></td><td><div class="submit-button"><input type="submit" value="Perform"></div></td></tr>
+        <tr><td></td><td><div class="submit-button"><input type="submit" class="btn btn-primary" value="Perform"></div></td></tr>
     </table>
 </form:form>

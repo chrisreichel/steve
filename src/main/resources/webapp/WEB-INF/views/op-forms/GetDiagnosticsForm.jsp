@@ -22,7 +22,7 @@
     <section><span>Charge Points with OCPP ${opVersion}</span></section>
     <%@ include file="../00-cp-multiple.jsp" %>
     <section><span>Parameters</span></section>
-    <table class="userInput">
+    <table class="table table-sm">
         <tr><td>Location (directory URI):</td><td><form:input path="location" /></td></tr>
         <tr><td>Retries (integer):</td><td><form:input path="retries" placeholder="optional" /></td></tr>
         <tr><td>Retry Interval (integer):</td><td><form:input path="retryInterval" placeholder="optional" /></td></tr>
@@ -36,6 +36,6 @@
                 <form:input path="stop" placeholder="optional" cssClass="dateTimePicker"/>
             </td>
         </tr>
-        <tr><td></td><td><div class="submit-button"><input type="submit" value="Perform"></div></td></tr>
+        <tr><td></td><td><div class="submit-button"><input type="submit" class="btn btn-primary" value="Perform"></div></td></tr>
     </table>
 </form:form>

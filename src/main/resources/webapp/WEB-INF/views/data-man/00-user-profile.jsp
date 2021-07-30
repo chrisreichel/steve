@@ -19,19 +19,19 @@
 
 --%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-<table class="userInput">
+<table class="table table-sm">
 	<thead><tr><th>Profile</th><th></th></thead>
-	<tr><td>First name:</td><td><form:input path="firstName"/></td></tr>
-	<tr><td>Last name:</td><td><form:input path="lastName"/></td></tr>
+	<tr><td>First name:</td><td><form:input path="firstName" cssClass="form-control form-control-sm"/></td></tr>
+	<tr><td>Last name:</td><td><form:input path="lastName"  cssClass="form-control form-control-sm"/></td></tr>
 	<tr><td>Birthday:</td><td><form:input path="birthDay" cssClass="datePicker"/></td></tr>
 	<tr>
 		<td>Sex:</td>
-		<td><form:select path="sex">
+		<td><form:select path="sex" cssClass="form-control form-control-sm">
 			<form:options items="${sex}" itemLabel="value"/>
 		</form:select>
 		</td>
 	</tr>
-	<tr><td>Phone:</td><td><form:input path="phone"/></td></tr>
-	<tr><td>E-mail:</td><td><form:input path="eMail"/></td></tr>
-	<tr><td>Additional Note:</td><td><form:textarea path="note"/></td></tr>
+	<tr><td>Phone:</td><td><form:input path="phone" cssClass="form-control form-control-sm"/></td></tr>
+	<tr><td>E-mail:</td><td><form:input path="eMail" cssClass="form-control form-control-sm"/></td></tr>
+	<tr><td>Additional Note:</td><td><form:textarea path="note" cssClass="form-control form-control-sm"/></td></tr>
 </table>

@@ -19,7 +19,7 @@
 
 --%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-<table class="userInput">
+<table class="table table-sm">
 	<thead><tr><th>OCPP</th><th></th></thead>
 	<tbody>
 		<tr>
@@ -44,7 +44,7 @@
 		</i></td><td></td></tr>
 	</tbody>
 </table>
-<table class="userInput">
+<table class="table table-sm">
 	<thead><tr><th>Misc.</th><th></th></thead>
 	<tbody>
 	<%-- print this only when updating, otherwise unnecessary --%>
@@ -54,8 +54,8 @@
 	<tr><td>Additional Note:</td><td><form:textarea path="note"/></td></tr>
 	<tr><td></td>
 		<td id="add_space">
-			<input type="submit" name="${submitButtonName}" value="${submitButtonValue}">
-			<input type="submit" name="backToOverview" value="Back to Overview">
+			<input type="submit" class="btn btn-sm btn-primary" name="${submitButtonName}" value="${submitButtonValue}">
+			<input type="submit" class="btn btn-sm btn-primary" name="backToOverview" value="Back to Overview">
 		</td>
 	</tr>
 	</tbody>

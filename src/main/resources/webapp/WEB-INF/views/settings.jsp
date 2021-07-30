@@ -77,8 +77,8 @@
         </tr>
         <tr><td></td>
             <td id="add_space">
-                <input type="submit" name="change" value="Change">
-                <input type="submit" name="testMail" value="Send Test Mail">
+                <input type="submit" class="btn btn-primary" name="change" value="Change">
+                <input type="submit" class="btn btn-primary" name="testMail" value="Send Test Mail">
             </td></tr>
     </table>
 

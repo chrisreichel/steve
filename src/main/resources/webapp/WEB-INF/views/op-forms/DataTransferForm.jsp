@@ -22,10 +22,10 @@
     <section><span>Charge Points with OCPP ${opVersion}</span></section>
     <%@ include file="../00-cp-multiple.jsp" %>
     <section><span>Parameters</span></section>
-    <table class="userInput">
+    <table class="table table-sm">
         <tr><td>Vendor ID (String):</td><td><form:input path="vendorId" /></td></tr>
         <tr><td>Message ID (String):</td><td><form:input path="messageId" placeholder="optional" /></td></tr>
         <tr><td>Data (Text):</td><td><form:textarea path="data" placeholder="optional" /></td></tr>
-        <tr><td></td><td><div class="submit-button"><input type="submit" value="Perform"></div></td></tr>
+        <tr><td></td><td><div class="submit-button"><input type="submit" class="btn btn-primary" value="Perform"></div></td></tr>
     </table>
 </form:form>

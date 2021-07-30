@@ -65,12 +65,12 @@
         </a>
     </span></section>
     <form:form action="${ctxPath}/manager/chargepoints/add/batch" modelAttribute="batchChargePointForm" style="display: none">
-        <table class="userInput">
+        <table class="table table-sm">
             <tr>
                 <td>ChargeBox IDs:</td><td><form:textarea path="idList"/></td></tr>
             <tr><td></td>
                 <td id="add_space">
-                    <input type="submit" value="Add All">
+                    <input type="submit" class="btn btn-sm btn-primary" value="Add All">
                 </td>
             </tr>
         </table>
@@ -79,7 +79,7 @@
     <section><span>Add Charge Point</span></section>
     <form:form action="${ctxPath}/manager/chargepoints/add/single" modelAttribute="chargePointForm">
 
-        <table class="userInput">
+        <table class="table table-sm">
             <thead><tr><th>OCPP</th><th></th></thead>
             <tbody>
                 <tr>

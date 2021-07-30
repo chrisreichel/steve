@@ -22,7 +22,7 @@
     <section><span>Charge Points with OCPP ${opVersion}</span></section>
     <%@ include file="../00-cp-multiple.jsp" %>
     <section><span>Parameters</span></section>
-    <table class="userInput">
+    <table class="table table-sm">
         <tr>
             <td>Key Type:</td>
             <td><form:select path="keyType">
@@ -43,6 +43,6 @@
             <td><form:input path="customConfKey"/></td>
         </tr>
         <tr><td>Value:</td><td><form:input path="value" /></td></tr>
-        <tr><td></td><td><div class="submit-button"><input type="submit" value="Perform"></div></td></tr>
+        <tr><td></td><td><div class="submit-button"><input type="submit" class="btn btn-primary" value="Perform"></div></td></tr>
     </table>
 </form:form>
