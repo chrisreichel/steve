@@ -29,6 +29,7 @@ public class SteveDevStarter implements ApplicationStarter {
     private final JettyServer jettyServer;
 
     SteveDevStarter() {
+        System.setProperty("user.timezone", "GMT");
         this.jettyServer = new JettyServer();
     }
 

@@ -24,30 +24,41 @@
 <%@ include file="00-context.jsp" %>
 
 <!DOCTYPE html>
-<html>
-<head>
-	<link rel="icon" href="${ctxPath}/static/images/favicon.ico" type="image/x-icon" />
-	<link rel="shortcut icon" href="${ctxPath}/static/images/favicon.ico" type="image/x-icon" />
-	<link rel="stylesheet" type="text/css" href="${ctxPath}/static/css/style.css">
-	<title>AZEnergy Login</title>
-</head>
-<body>
-<div class="main">
-<div class="top-banner"><div class="container"><a href="${ctxPath}/manager/home"><img src="${ctxPath}/static/images/logo2.png" height="80"></a></div></div>
-<div class="top-menu"></div>
-<div class="main-wrapper">
+<html ang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="${ctxPath}/static/images/favicon.ico" type="image/x-icon" />
+        <link rel="shortcut icon" href="${ctxPath}/static/images/favicon.ico" type="image/x-icon" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="${ctxPath}/static/css/signin.css">
+        <title>AZEnergy Login</title>
+    </head>
+
+
+    <body class="text-center">
     <c:if test="${param.error != null}">
-        <div class="error">Your name or password is incorrect.</div>
+        <div class="alert alert-success" role="alert">
+            Your username or password is incorrect.
+        </div>
     </c:if>
-    <div class="content">
-        <section><span>Log In</span></section>
-        <form method="POST" action="${ctxPath}/manager/signin">
-            <table class="userInput">
-                <tr><td>Username:</td><td><input type="text" name="username" id="username" required /></td></tr>
-                <tr><td>Password:</td><td><input type="password" name="password" id="password" required /></td></tr>
-                <tr><td></td><td id="add_space"><input type="submit" value="Sign In"></td></tr>
-            </table>
-            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-        </form>
-    </div>
-<%@ include file="00-footer.jsp" %>
+
+    <form class="form-signin" method="POST" action="${ctxPath}/manager/signin">
+        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+        <img class="mb-4" src="${ctxPath}/static/images/logo2.png" alt="" width="132" height="132">
+        <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+        <label for="inputEmail" class="sr-only">Username</label>
+        <input type="text" name="username" id="inputEmail" class="form-control" placeholder="Username" required autofocus>
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password"  name="password" id="inputPassword" class="form-control" placeholder="Password" required>
+        <div class="checkbox mb-3">
+            <label>
+                <input type="checkbox" value="remember-me"> Remember me
+            </label>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+        <p class="mt-5 mb-3 text-muted">&copy; 2021</p>
+    </form>
+    </body>
+
+</html>
