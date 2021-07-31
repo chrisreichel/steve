@@ -19,15 +19,18 @@
 
 --%>
 
-        <div class="row">
-            <footer class="footer">
-                <div class="container">
-                    <img src="${ctxPath}/static/images/azb.png" height="72">
-                </div>
-            </footer>
-        </div>
+    <div class="row">
 
+        <hr/>
+
+        <footer class="footer">
+            <div class="container">
+                <img src="${ctxPath}/static/images/azb.png" height="72">
+            </div>
+        </footer>
     </div>
+
+</div> <!-- container end -->
 
 </body>
 </html>

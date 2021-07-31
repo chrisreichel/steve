@@ -47,11 +47,8 @@
             .navbar .nav-item .dropdown-menu{ margin-top:0; }
         }
         .footer {
-            position: absolute;
-            bottom: 0;
             width: 100%;
-            height: 60px; /* Set the fixed height of the footer here */
-            line-height: 60px; /* Vertically center the text there */
+            height: 72px; /* Set the fixed height of the footer here */
             background-color: #f5f5f5;
         }
         /* ============ desktop view .end// ============ */
