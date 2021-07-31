@@ -58,46 +58,47 @@
 					<h5>Chargepoint Activity</h5>
 				</div>
 				<div class="card-body">
-					<ul class="list-group">
-						<li class="list-group-item d-flex justify-content-between align-items-center">
+						<div class="card-title">
 							<a href="${ctxPath}/manager/chargepoints">Received Heartbeats</a>
-								<table class="table table-sm table-hoover">
-									<tbody>
-									<tr>
-										<td>Today</td>
-										<td>${stats.heartbeatToday}</td>
-									</tr>
-									<tr>
-										<td>Yesterday</td>
-										<td>${stats.heartbeatYesterday}</td>
-									</tr>
-									<tr>
-										<td>Earlier</td>
-										<td>${stats.heartbeatEarlier}</td>
-									</tr>
-									</tbody>
-								</table>
-						</li>
-						<li class="list-group-item d-flex justify-content-between align-items-center">
-							<a href="${ctxPath}/manager/home/ocppJsonStatus">Connected JSON Charge Points</a>
+						</div>
 							<table class="table table-sm table-hoover">
 								<tbody>
 								<tr>
-									<td>OCPP 1.2</td>
-									<td>${stats.numOcpp12JChargeBoxes}</td>
+									<td>Today</td>
+									<td>${stats.heartbeatToday}</td>
+								</tr>
+								<tr>
+									<td>Yesterday</td>
+									<td>${stats.heartbeatYesterday}</td>
+								</tr>
+								<tr>
+									<td>Earlier</td>
+									<td>${stats.heartbeatEarlier}</td>
+								</tr>
+								</tbody>
+							</table>
+				</div>
+				<hr/>
+				<div class="card-body">
+							<div class="card-title">
+								<a href="${ctxPath}/manager/home/ocppJsonStatus">Connected JSON Charge Points</a>
+							</div>
+							<table class="table table-sm table-hoover">
+								<tbody>
+								<tr>
+									<td>OCPP 1.6</td>
+									<td>${stats.numOcpp16JChargeBoxes}</td>
 								</tr>
 								<tr>
 									<td>OCPP 1.5</td>
 									<td>${stats.numOcpp15JChargeBoxes}</td>
 								</tr>
 								<tr>
-									<td>OCPP 1.6</td>
-									<td>${stats.numOcpp16JChargeBoxes}</td>
+									<td>OCPP 1.2</td>
+									<td>${stats.numOcpp12JChargeBoxes}</td>
 								</tr>
 								</tbody>
 							</table>
-						</li>
-					</ul>
 				</div>
 			</div>
 		</div>
@@ -121,7 +122,8 @@
 								<span class="badge badge-light">${stats.numTransactions}</span>
 							</a>
 						</li>
-						<li class="list-group-item d-flex justify-content-between align-items-center">
+					</ul>
+					<div class="card-body">
 							<a href="${ctxPath}/manager/home/connectorStatus">Connector Status</a>
 							<table class="table table-sm table-hoover">
 								<tbody>
@@ -133,8 +135,7 @@
 								</c:forEach>
 								</tbody>
 							</table>
-						</li>
-					</ul>
+					</div>
 				</div>
 			</div>
 		</div>
