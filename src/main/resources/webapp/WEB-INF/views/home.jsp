@@ -123,6 +123,9 @@
 							</a>
 						</li>
 					</ul>
+				</div>
+				<hr/>
+
 					<div class="card-body">
 							<a href="${ctxPath}/manager/home/connectorStatus">Connector Status</a>
 							<table class="table table-sm table-hoover">
@@ -136,7 +139,7 @@
 								</tbody>
 							</table>
 					</div>
-				</div>
+
 			</div>
 		</div>
 

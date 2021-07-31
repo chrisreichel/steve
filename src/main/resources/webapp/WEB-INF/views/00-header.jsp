@@ -46,6 +46,14 @@
             .navbar .nav-item:hover .dropdown-menu{ display: block; }
             .navbar .nav-item .dropdown-menu{ margin-top:0; }
         }
+        .footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 60px; /* Set the fixed height of the footer here */
+            line-height: 60px; /* Vertically center the text there */
+            background-color: #f5f5f5;
+        }
         /* ============ desktop view .end// ============ */
     </style>
     <title>AZEnergy</title>
@@ -61,7 +69,7 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav"  aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="main_nav">
+            <div class="collapse navbar-collapse justify-content-md-center" id="main_nav">
                 <ul class="navbar-nav">
                     <li class="nav-item"> <a class="nav-link" href="${ctxPath}/manager">Home </a> </li>
                     <li class="nav-item dropdown">
