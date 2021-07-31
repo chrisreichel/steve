@@ -30,19 +30,19 @@
         <table class="table table-sm">
             <tr>
                 <td>User ID:</td>
-                <td><form:input path="userPk"/></td>
+                <td><form:input path="userPk" cssClass="form-control form-control-sm"/></td>
             </tr>
             <tr>
                 <td>Ocpp ID Tag:</td>
-                <td><form:input path="ocppIdTag"/></td>
+                <td><form:input path="ocppIdTag" cssClass="form-control form-control-sm"/></td>
             </tr>
             <tr>
                 <td>Name:</td>
-                <td><form:input path="name"/></td>
+                <td><form:input path="name" cssClass="form-control form-control-sm"/></td>
             </tr>
             <tr>
                 <td>E-Mail:</td>
-                <td><form:input path="email"/></td>
+                <td><form:input path="email" cssClass="form-control form-control-sm"/></td>
             </tr>
             <tr>
                 <td></td>
@@ -63,7 +63,7 @@
                 <th data-sort="string">E-Mail</th>
                 <th>
                     <form:form action="${ctxPath}/manager/users/add" method="get">
-                        <input type="submit" class="btn btn-sm btn-primary" class="blueSubmit" value="Add New">
+                        <input type="submit" class="btn btn-sm btn-primary" value="Add New">
                     </form:form>
                 </th>
             </tr>

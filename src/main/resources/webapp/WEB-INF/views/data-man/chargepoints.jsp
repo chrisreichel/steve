@@ -57,7 +57,7 @@
                         </form:form>
                         &nbsp;
                         <form:form cssClass="inline" action="${ctxPath}/manager/chargepoints/unknown/remove/${item.key}/" method="post">
-                            <input type="submit" class="btn btn-sm btn-primary" class="redSubmit" value="Forget"/>
+                            <input type="submit" class="btn btn-sm btn-warning" class="redSubmit" value="Forget"/>
                         </form:form>
                     </td>
                 </tr>
@@ -77,24 +77,24 @@
             <table class="table table-sm">
                 <tr>
                     <td>ChargeBox ID:</td>
-                    <td><form:input path="chargeBoxId"/></td>
+                    <td><form:input path="chargeBoxId" cssClass="form-control form-control-sm"/></td>
                 </tr>
                 <tr>
                     <td>Description:</td>
-                    <td><form:input path="description"/></td>
+                    <td><form:input path="description" cssClass="form-control form-control-sm"/></td>
                 </tr>
                 <tr>
                     <td>Ocpp Version:</td>
-                    <td><form:select path="ocppVersion">
+                    <td><form:select path="ocppVersion" cssClass="form-control form-control-sm">
                         <option value="" selected>All</option>
-                        <form:options items="${ocppVersion}" itemLabel="value"/>
+                        <form:options items="${ocppVersion}" itemLabel="value" cssClass="custom-control-input"/>
                     </form:select>
                     </td>
                 </tr>
                 <tr>
                     <td>Heartbeat Period:</td>
                     <td><form:select path="heartbeatPeriod">
-                        <form:options items="${heartbeatPeriod}" itemLabel="value"/>
+                        <form:options items="${heartbeatPeriod}" itemLabel="value" cssClass="form-control form-control-sm"/>
                     </form:select>
                     </td>
                 </tr>

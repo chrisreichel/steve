@@ -32,7 +32,7 @@
         <input type="submit" class="btn btn-warning" value="Delete Finished"/>
     </form:form>
     <br>
-    <table class="res">
+    <table class="table table-sm table-striped">
         <thead>
             <tr>
                 <th data-sort="int">Task ID</th>

@@ -32,37 +32,37 @@
             <table class="table table-sm">
                 <tr>
                     <td>Charging Profile ID (integer):</td>
-                    <td><form:input path="chargingProfilePk"/></td>
+                    <td><form:input path="chargingProfilePk" cssClass="form-control form-control-sm"/></td>
                 </tr>
                 <tr>
                     <td>Stack Level (integer):</td>
-                    <td><form:input path="stackLevel"/></td>
+                    <td><form:input path="stackLevel" cssClass="form-control form-control-sm"/></td>
                 </tr>
                 <tr>
                     <td>Description:</td>
-                    <td><form:input path="description"/></td>
+                    <td><form:input path="description" cssClass="form-control form-control-sm"/></td>
                 </tr>
                 <tr>
                     <td>Profile Purpose:</td>
-                    <td><form:select path="profilePurpose">
+                    <td><form:select path="profilePurpose" cssClass="form-control form-control-sm">
                         <option value="" selected>-- Empty --</option>
-                        <form:options items="${profilePurpose}"/>
+                        <form:options items="${profilePurpose}" cssClass="form-control form-control-sm"/>
                     </form:select>
                     </td>
                 </tr>
                 <tr>
                     <td>Profile Kind:</td>
-                    <td><form:select path="profileKind">
+                    <td><form:select path="profileKind" cssClass="form-control form-control-sm">
                         <option value="" selected>-- Empty --</option>
-                        <form:options items="${profileKind}"/>
+                        <form:options items="${profileKind}" cssClass="form-control form-control-sm"/>
                     </form:select>
                     </td>
                 </tr>
                 <tr>
                     <td>Recurrency Kind:</td>
-                    <td><form:select path="recurrencyKind">
+                    <td><form:select path="recurrencyKind" cssClass="form-control form-control-sm">
                         <option value="" selected>-- Empty --</option>
-                        <form:options items="${recurrencyKind}"/>
+                        <form:options items="${recurrencyKind}" cssClass="form-control form-control-sm"/>
                     </form:select>
                     </td>
                 </tr>

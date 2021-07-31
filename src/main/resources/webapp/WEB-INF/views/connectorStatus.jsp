@@ -37,7 +37,7 @@ Connector Status
 	<table class="table table-sm">
 		<tr>
 			<td>ChargeBox ID:</td>
-			<td><form:select path="chargeBoxId">
+			<td><form:select path="chargeBoxId" cssClass="form-control form-control-sm">
 				<option value="" selected>All</option>
 				<form:options items="${cpList}"/>
 			</form:select>
@@ -45,7 +45,7 @@ Connector Status
 		</tr>
 		<tr>
 			<td>Status:</td>
-			<td><form:select path="status">
+			<td><form:select path="status" cssClass="form-control form-control-sm">
 				<option value="" selected>All</option>
 				<form:options items="${statusValues}"/>
 			</form:select>

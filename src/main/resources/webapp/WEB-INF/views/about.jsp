@@ -21,7 +21,7 @@
 <%@ include file="00-header.jsp" %>
 <div class="content">
 <section><span>About</span></section>
-<table class="userInputFullPage">
+<table class="table table-striped">
 	<tr><td>Version:</td><td>${version}</td></tr>
 	<tr><td>Database Version:</td><td>${db.version}</td></tr>
 	<tr><td>Last Database Update:</td><td>${db.updateTimestamp}</td></tr>
@@ -29,7 +29,7 @@
     <tr><td>System Time Zone:</td><td>${systemTimeZone}</td></tr>
 </table>
 <section><span>Endpoint Info</span></section>
-    <table class="userInputFullPage">
+    <table class="table table-striped">
         <tr>
             <td>${endpointInfo.ocppSoap.info}:</td>
             <td><c:forEach items="${endpointInfo.ocppSoap.data}" var="i">${i}<br></c:forEach></td>

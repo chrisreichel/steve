@@ -39,11 +39,11 @@ Transactions
         <table class="table table-sm">
             <tr>
                 <td>Transaction ID:</td>
-                <td><form:input path="transactionPk"/></td>
+                <td><form:input path="transactionPk" cssClass="form-control form-control-sm"/></td>
             </tr>
             <tr>
                 <td>ChargeBox ID:</td>
-                <td><form:select path="chargeBoxId">
+                <td><form:select path="chargeBoxId" cssClass="form-control form-control-sm">
                         <option value="" selected>All</option>
                         <form:options items="${cpList}"/>
                     </form:select>
@@ -51,7 +51,7 @@ Transactions
             </tr>
             <tr>
                 <td>OCPP ID Tag:</td>
-                <td><form:select path="ocppIdTag">
+                <td><form:select path="ocppIdTag" cssClass="form-control form-control-sm">
                         <option value="" selected>All</option>
                         <form:options items="${idTagList}"/>
                     </form:select>
@@ -59,14 +59,14 @@ Transactions
             </tr>
             <tr>
                 <td>Transaction Type:</td>
-                <td><form:select path="type">
+                <td><form:select path="type" cssClass="form-control form-control-sm">
                         <form:options items="${type}" itemLabel="value"/>
                     </form:select>
                 </td>
             </tr>
             <tr>
                 <td>Period Type:</td>
-                <td><form:select path="periodType" id="periodTypeSelect">
+                <td><form:select path="periodType" id="periodTypeSelect" cssClass="form-control form-control-sm">
                         <form:options items="${periodType}" itemLabel="value"/>
                     </form:select>
                 </td>
@@ -81,7 +81,7 @@ Transactions
             </tr>
             <tr>
                 <td>Get as CSV?:</td>
-                <td><form:checkbox path="returnCSV"/></td>
+                <td><form:checkbox path="returnCSV" cssClass="form-control form-control-sm"/></td>
             </tr>
             <tr>
                 <td></td>
@@ -123,7 +123,7 @@ Transactions
                 <td>
                     <c:if test="${empty ta.stopValue}">
                         <form:form action="${ctxPath}/manager/transactions/stop/${ta.id}">
-                            <input type="submit" class="btn btn-sm btn-primary" class="redSubmit" title="Manually stop this active transaction" value="Stop">
+                            <input type="submit" class="btn btn-sm btn-warning" class="redSubmit" title="Manually stop this active transaction" value="Stop">
                         </form:form>
                     </c:if>
                 </td>

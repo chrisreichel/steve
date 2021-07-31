@@ -25,7 +25,7 @@
 		<tr>
 			<td>ID Tag:</td>
 			<td>
-				<form:input path="idTag" readonly="${isUpdateForm}"/>
+				<form:input path="idTag" readonly="${isUpdateForm}" cssClass="form-control form-control-sm"/>
 				<a class="tooltip" href="#"><img src="${ctxPath}/static/images/info.png" style="vertical-align:middle">
 					<span>This field is set when adding an OCPP Tag, and cannot be changed later</span>
 				</a>
@@ -33,10 +33,10 @@
 		</tr>
 		<tr>
 			<td>Parent ID Tag:</td>
-			<td><form:select path="parentIdTag" items="${idTagList}"/></td>
+			<td><form:select path="parentIdTag" items="${idTagList}" cssClass="form-control form-control-sm"/></td>
 		</tr>
 		<tr><td>Expiry Date/Time:</td><td><form:input path="expiration" cssClass="dateTimePicker"/></td></tr>
-		<tr><td>Max. Active Transaction Count:</td><td><form:input path="maxActiveTransactionCount" placeholder="if empty, 1 will be assumed"/></td></tr>
+		<tr><td>Max. Active Transaction Count:</td><td><form:input path="maxActiveTransactionCount" placeholder="if empty, 1 will be assumed" cssClass="form-control form-control-sm"/></td></tr>
 		<tr><td><i>
 			Set to <b>0</b> to block this tag. Set to a <b>negative</b> value to disable concurrent transaction checks
 			(i.e. every transaction<br>will be allowed). Set to a <b>positive</b> value to control the number of
@@ -51,7 +51,7 @@
 	<c:if test="${isUpdateForm}">
 		<tr><td>Active Transaction Count:</td><td>${activeTransactionCount}</td></tr>
 	</c:if>
-	<tr><td>Additional Note:</td><td><form:textarea path="note"/></td></tr>
+	<tr><td>Additional Note:</td><td><form:textarea path="note" cssClass="form-control form-control-sm"/></td></tr>
 	<tr><td></td>
 		<td id="add_space">
 			<input type="submit" class="btn btn-sm btn-primary" name="${submitButtonName}" value="${submitButtonValue}">

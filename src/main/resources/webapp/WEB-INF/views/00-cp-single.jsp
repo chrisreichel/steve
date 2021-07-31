@@ -23,7 +23,7 @@
 	<tr>
 		<td style="vertical-align:top">Select one:</td>
 		<td>
-			<form:select path="chargePointSelectList" size="5" multiple="false">
+			<form:select path="chargePointSelectList" size="5" multiple="false" cssClass="form-control form-control-sm">
 				<c:forEach items="${cpList}" var="cp">
 					<form:option value="${cp.ocppTransport};${cp.chargeBoxId};${cp.endpointAddress}" label="${cp.chargeBoxId}"/>
 				</c:forEach>

@@ -67,10 +67,10 @@
     <form:form action="${ctxPath}/manager/chargepoints/add/batch" modelAttribute="batchChargePointForm" style="display: none">
         <table class="table table-sm">
             <tr>
-                <td>ChargeBox IDs:</td><td><form:textarea path="idList"/></td></tr>
+                <td>ChargeBox IDs:</td><td><form:textarea path="idList" cssClass="form-control form-control-sm"/></td></tr>
             <tr><td></td>
                 <td id="add_space">
-                    <input type="submit" class="btn btn-sm btn-primary" value="Add All">
+                    <input type="submit" class="btn btn-sm btn-secondary" value="Add All">
                 </td>
             </tr>
         </table>
@@ -85,7 +85,7 @@
                 <tr>
                     <td>ChargeBox ID:</td>
                     <td>
-                        <form:input path="chargeBoxId"/>
+                        <form:input path="chargeBoxId" cssClass="form-control form-control-sm"/>
                         <a class="tooltip" href="#"><img src="${ctxPath}/static/images/info.png" style="vertical-align:middle">
                             <span>This field is set when adding a charge point, and cannot be changed later</span>
                         </a>
@@ -95,14 +95,14 @@
                     <td>Insert connector status after start/stop transaction:
                     </td>
                     <td>
-                        <form:checkbox path="insertConnectorStatusAfterTransactionMsg"/>
+                        <form:checkbox path="insertConnectorStatusAfterTransactionMsg" cssClass="custom-control-input"/>
                         <a class="tooltip" href="#"><img src="${ctxPath}/static/images/info.png" style="vertical-align:middle">
                             <span>After a transaction start/stop message, a charging station might send a connector status notification, but it is not required. If this is enabled, SteVe will update the connector status no matter what.</span>
                         </a>
                     </td>
                 </tr>
                 <tr><td>Registration status:</td><td>
-                    <form:select path="registrationStatus" items="${registrationStatusList}"/>
+                    <form:select path="registrationStatus" items="${registrationStatusList}" cssClass="form-control form-control-sm"/>
                 </td></tr>
             </tbody>
         </table>

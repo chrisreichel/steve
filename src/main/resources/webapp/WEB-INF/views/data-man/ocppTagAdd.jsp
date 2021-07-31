@@ -71,7 +71,7 @@
                 <td>ID Tags:</td><td><form:textarea path="idList"/></td></tr>
             <tr><td></td>
                 <td id="add_space">
-                    <input type="submit" class="btn btn-sm btn-primary" value="Add All">
+                    <input type="submit" class="btn btn-sm btn-secondary" value="Add All">
                 </td>
             </tr>
         </table>

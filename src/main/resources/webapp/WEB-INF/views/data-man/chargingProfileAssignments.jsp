@@ -31,15 +31,15 @@
         <table class="table table-sm">
             <tr>
                 <td>ChargeBox ID:</td>
-                <td><form:select path="chargeBoxId">
+                <td><form:select path="chargeBoxId" cssClass="form-control form-control-sm">
                     <option value="" selected>All</option>
-                    <form:options items="${cpList}"/>
+                    <form:options items="${cpList}" cssClass="custom-control-input"/>
                 </form:select>
                 </td>
             </tr>
             <tr>
                 <td>Charging Profile ID:</td>
-                <td><form:select path="chargingProfilePk">
+                <td><form:select path="chargingProfilePk" cssClass="form-control form-control-sm">
                     <option value="" selected>All</option>
                     <form:options items="${profileList}" itemLabel="itemDescription" itemValue="chargingProfilePk"/>
                 </form:select>
@@ -47,7 +47,7 @@
             </tr>
             <tr>
                 <td>Charging Profile Description:</td>
-                <td><form:input path="chargingProfileDescription"/></td>
+                <td><form:input path="chargingProfileDescription" cssClass="form-control form-control-sm"/></td>
             </tr>
             <tr>
                 <td></td>

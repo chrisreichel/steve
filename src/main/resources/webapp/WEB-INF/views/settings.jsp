@@ -32,7 +32,7 @@
 <form:form action="${ctxPath}/manager/settings" modelAttribute="settingsForm">
 
     <section><span>OCPP Settings</span></section>
-    <table class="userInputFullPage">
+    <table class="table table-sm table-striped">
         <tr><td>Heartbeat Interval:</td><td>
             <form:input path="heartbeat"/>
         </td></tr>
@@ -56,29 +56,29 @@
             <span>Specify the recipients of the notifications by entering one e-mail address per line</span>
         </a>
     </span></section>
-    <table class="userInputFullPage">
-        <tr><td>Enable Notifications?:</td><td><form:checkbox path="enabled"/></td></tr>
-        <tr><td>Protocol:</td><td><form:input path="protocol"/></td></tr>
-        <tr><td>Host:</td><td><form:input path="host"/></td></tr>
-        <tr><td>Port:</td><td><form:input path="port"/></td></tr>
-        <tr><td>From:</td><td><form:input path="from"/></td></tr>
-        <tr><td>User name:</td><td><form:input path="username"/></td></tr>
-        <tr><td>Password:</td><td><form:input path="password"/></td></tr>
+    <table class="table table-sm table-striped">
+        <tr><td>Enable Notifications?:</td><td><form:checkbox path="enabled" cssClass="form-control form-control-sm"/></td></tr>
+        <tr><td>Protocol:</td><td><form:input path="protocol" cssClass="form-control form-control-sm"/></td></tr>
+        <tr><td>Host:</td><td><form:input path="host" cssClass="form-control form-control-sm"/></td></tr>
+        <tr><td>Port:</td><td><form:input path="port" cssClass="form-control form-control-sm"/></td></tr>
+        <tr><td>From:</td><td><form:input path="from" cssClass="form-control form-control-sm"/></td></tr>
+        <tr><td>User name:</td><td><form:input path="username" cssClass="form-control form-control-sm"/></td></tr>
+        <tr><td>Password:</td><td><form:input path="password" cssClass="form-control form-control-sm"/></td></tr>
 
         <tr><td>Recipients:</td>
-            <td><form:textarea path="recipients"/></td>
+            <td><form:textarea path="recipients" cssClass="form-control form-control-sm"/></td>
         </tr>
         <tr>
             <td>Notify when... </td>
             <td>
                 <form:checkboxes items="${features}" path="enabledFeatures"
-                                 itemLabel="text" delimiter="<br/>"/>
+                                 itemLabel="text" delimiter="<br/>" cssClass="form-control form-control-sm"/>
             </td>
         </tr>
         <tr><td></td>
             <td id="add_space">
                 <input type="submit" class="btn btn-primary" name="change" value="Change">
-                <input type="submit" class="btn btn-primary" name="testMail" value="Send Test Mail">
+                <input type="submit" class="btn btn-info" name="testMail" value="Send Test Mail">
             </td></tr>
     </table>
 

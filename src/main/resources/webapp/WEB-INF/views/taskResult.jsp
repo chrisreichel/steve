@@ -30,7 +30,7 @@
     <div class="info"><b>Info:</b> This page automatically reloads every 5 seconds until the task is finished.</div>
 </c:if>
     <center>
-        <table id='details' class='cpd'>
+        <table id='details' class='table table-sm table-striped'>
             <thead><tr><th>Task Details</th><th></th></tr></thead>
             <tr><td>Operation name</td><td>${task.ocppVersion.value} / ${task.operationName}</td></tr>
             <tr><td>Origin</td><td>${task.origin} (${task.caller})</td></tr>
@@ -43,7 +43,7 @@
     </center>
     <br>
     <section><span>Task Result</span></section>
-    <table class="res">
+    <table class="table table-sm table-striped">
         <thead><tr><th>ChargeBox ID</th><th>Response</th><th>Error</th></tr></thead>
         <tbody>
         <c:forEach items="${task.resultMap}" var="result">

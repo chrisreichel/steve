@@ -43,27 +43,27 @@
             <tr>
                 <td>Transactions:</td>
                 <td>
-                    <a href="${ctxPath}/manager/transactions/query?chargeBoxId=${chargePointForm.chargeBoxId}&amp;type=ACTIVE">ACTIVE</a>
+                    <a class="alert-link" href="${ctxPath}/manager/transactions/query?chargeBoxId=${chargePointForm.chargeBoxId}&amp;type=ACTIVE">ACTIVE</a>
                      /
-                    <a href="${ctxPath}/manager/transactions/query?chargeBoxId=${chargePointForm.chargeBoxId}&amp;type=ALL">ALL</a>
+                    <a class="alert-link" href="${ctxPath}/manager/transactions/query?chargeBoxId=${chargePointForm.chargeBoxId}&amp;type=ALL">ALL</a>
                 </td>
             </tr>
             <tr>
                 <td>Reservations:</td>
                 <td>
-                    <a href="${ctxPath}/manager/reservations/query?chargeBoxId=${chargePointForm.chargeBoxId}&amp;periodType=ACTIVE">ACTIVE</a>
+                    <a class="alert-link" href="${ctxPath}/manager/reservations/query?chargeBoxId=${chargePointForm.chargeBoxId}&amp;periodType=ACTIVE">ACTIVE</a>
                 </td>
             </tr>
             <tr>
                 <td>Connector Status:</td>
                 <td>
-                    <a href="${ctxPath}/manager/home/connectorStatus/query?chargeBoxId=${chargePointForm.chargeBoxId}">ALL</a>
+                    <a class="alert-link" href="${ctxPath}/manager/home/connectorStatus/query?chargeBoxId=${chargePointForm.chargeBoxId}">ALL</a>
                 </td>
             </tr>
             <tr>
                 <td>Charging Profiles:</td>
                 <td>
-                    <a href="${ctxPath}/manager/chargingProfiles/assignments?chargeBoxId=${chargePointForm.chargeBoxId}">ALL</a>
+                    <a class="alert-link" href="${ctxPath}/manager/chargingProfiles/assignments?chargeBoxId=${chargePointForm.chargeBoxId}">ALL</a>
                 </td>
             </tr>
             </tbody>
@@ -103,14 +103,14 @@
                         <td>Insert connector status after start/stop transaction:
                         </td>
                         <td>
-                            <form:checkbox path="insertConnectorStatusAfterTransactionMsg"/>
+                            <form:checkbox path="insertConnectorStatusAfterTransactionMsg" cssClass="form-control form-control-sm"/>
                             <a class="tooltip" href="#"><img src="${ctxPath}/static/images/info.png" style="vertical-align:middle">
                                 <span>After a transaction start/stop message, a charging station might send a connector status notification, but it is not required. If this is enabled, SteVe will update the connector status no matter what.</span>
                             </a>
                         </td>
                     </tr>
                     <tr><td>Registration status:</td><td>
-                        <form:select path="registrationStatus" items="${registrationStatusList}"/>
+                        <form:select path="registrationStatus" items="${registrationStatusList}" cssClass="form-control form-control-sm"/>
                     </td></tr>
                 </tbody>
             </table>
