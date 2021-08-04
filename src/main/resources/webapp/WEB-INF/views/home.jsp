@@ -145,5 +145,6 @@
 
 	</div>
 
+	<hr/>
 
 <%@ include file="00-footer.jsp" %>

@@ -72,7 +72,7 @@
             <td>Notify when... </td>
             <td>
                 <form:checkboxes items="${features}" path="enabledFeatures"
-                                 itemLabel="text" delimiter="<br/>" cssClass="form-control form-control-sm"/>
+                                 itemLabel="text" delimiter="<br/>"/>
             </td>
         </tr>
         <tr><td></td>
