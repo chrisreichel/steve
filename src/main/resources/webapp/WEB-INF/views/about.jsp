@@ -33,10 +33,18 @@
     <table  class="table table-sm">
         <tr>
             <td>${endpointInfo.ocppSoap.info}:</td>
-            <td><c:forEach items="${endpointInfo.ocppSoap.data}" var="i">${i}<br></c:forEach></td>
+            <td>
+                <c:forEach items="${endpointInfo.ocppSoap.data}" var="i">
+                    <div class="user-select-all font-weight-light">${i}</div>
+                </c:forEach>
+            </td>
         <tr>
             <td>${endpointInfo.ocppWebSocket.info}:</td>
-            <td><c:forEach items="${endpointInfo.ocppWebSocket.data}" var="i">${i}<br></c:forEach></td>
+            <td>
+                <c:forEach items="${endpointInfo.ocppWebSocket.data}" var="i">
+                    <div class="user-select-all font-weight-light">${i}</div>
+                </c:forEach>
+            </td>
         </tr>
     </tr>
     </table>

@@ -81,7 +81,7 @@ Transactions
             </tr>
             <tr>
                 <td>Get as CSV?:</td>
-                <td><form:checkbox path="returnCSV" cssClass="form-control form-control-sm"/></td>
+                <td><form:checkbox path="returnCSV"/></td>
             </tr>
             <tr>
                 <td></td>

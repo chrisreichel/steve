@@ -103,7 +103,7 @@
                         <td>Insert connector status after start/stop transaction:
                         </td>
                         <td>
-                            <form:checkbox path="insertConnectorStatusAfterTransactionMsg" cssClass="form-control form-control-sm"/>
+                            <form:checkbox path="insertConnectorStatusAfterTransactionMsg"/>
                             <a class="tooltip" href="#"><img src="${ctxPath}/static/images/info.png" style="vertical-align:middle">
                                 <span>After a transaction start/stop message, a charging station might send a connector status notification, but it is not required. If this is enabled, SteVe will update the connector status no matter what.</span>
                             </a>

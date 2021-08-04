@@ -57,7 +57,7 @@
         </a>
     </span></section>
     <table class="table table-sm">
-        <tr><td>Enable Notifications?:</td><td><form:checkbox path="enabled" cssClass="form-control form-control-sm"/></td></tr>
+        <tr><td>Enable Notifications?:</td><td><form:checkbox path="enabled"/></td></tr>
         <tr><td>Protocol:</td><td><form:input path="protocol" cssClass="form-control form-control-sm"/></td></tr>
         <tr><td>Host:</td><td><form:input path="host" cssClass="form-control form-control-sm"/></td></tr>
         <tr><td>Port:</td><td><form:input path="port" cssClass="form-control form-control-sm"/></td></tr>
@@ -69,13 +69,18 @@
             <td><form:textarea path="recipients" cssClass="form-control form-control-sm"/></td>
         </tr>
         <tr>
-            <td>Notify when... </td>
-            <td>
-                <form:checkboxes items="${features}" path="enabledFeatures"
-                                 itemLabel="text" delimiter="<br/>"/>
+            <td rowspan="2">Notify when... </td>
+        </tr>
+        <tr>
+            <td rowspan="2">
+                <div class="text-wrap font-weight-light">
+                    <form:checkboxes items="${features}" path="enabledFeatures"
+                                     itemLabel="text" delimiter="<br/>"/>
+                </div>
             </td>
         </tr>
-        <tr><td></td>
+        <tr>
+            <td></td>
             <td id="add_space">
                 <input type="submit" class="btn btn-primary" name="change" value="Change">
                 <input type="submit" class="btn btn-info" name="testMail" value="Send Test Mail">
