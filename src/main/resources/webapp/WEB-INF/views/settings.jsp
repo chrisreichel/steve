@@ -57,7 +57,7 @@
         </a>
     </span></section>
     <table class="table table-sm">
-        <tr><td colspan="2">Enable Notifications?: <form:checkbox path="enabled"/></td></tr>
+        <tr><td colspan="2">Enable Notifications?&nbsp;<form:checkbox path="enabled"/></td></tr>
         <tr><td>Protocol:</td><td><form:input path="protocol" cssClass="form-control form-control-sm"/></td></tr>
         <tr><td>Host:</td><td><form:input path="host" cssClass="form-control form-control-sm"/></td></tr>
         <tr><td>Port:</td><td><form:input path="port" cssClass="form-control form-control-sm"/></td></tr>
