@@ -37,15 +37,17 @@
 
 
     <body class="text-center">
-    <c:if test="${param.error != null}">
-        <div class="container">
-            <div class="alert alert-danger" role="alert">
-                Your username or password is incorrect.
-            </div>
-        </div>
-    </c:if>
 
     <form class="form-signin" method="POST" action="${ctxPath}/manager/signin">
+
+        <c:if test="${param.error != null}">
+            <div class="container">
+                <div class="alert alert-danger" role="alert">
+                    Your username or password is incorrect.
+                </div>
+            </div>
+        </c:if>
+
         <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
         <img class="mb-4" src="${ctxPath}/static/images/logo-tranp.png" alt="" width="112" height="112">
         <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
