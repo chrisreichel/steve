@@ -21,15 +21,16 @@
 <%@ include file="00-header.jsp" %>
 <div class="content">
 <section><span>About</span></section>
-<table class="table table-striped">
+<table class="table ">
 	<tr><td>Version:</td><td>${version}</td></tr>
 	<tr><td>Database Version:</td><td>${db.version}</td></tr>
 	<tr><td>Last Database Update:</td><td>${db.updateTimestamp}</td></tr>
     <tr><td>System Time:</td><td>${systemTime}</td></tr>
     <tr><td>System Time Zone:</td><td>${systemTimeZone}</td></tr>
 </table>
+    <hr/>
 <section><span>Endpoint Info</span></section>
-    <table class="table table-striped">
+    <table class="table ">
         <tr>
             <td>${endpointInfo.ocppSoap.info}:</td>
             <td><c:forEach items="${endpointInfo.ocppSoap.data}" var="i">${i}<br></c:forEach></td>

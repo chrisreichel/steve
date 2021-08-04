@@ -43,7 +43,7 @@
     </center>
     <br>
     <section><span>Task Result</span></section>
-    <table class="table table-sm table-striped">
+    <table class="table table-sm ">
         <thead><tr><th>ChargeBox ID</th><th>Response</th><th>Error</th></tr></thead>
         <tbody>
         <c:forEach items="${task.resultMap}" var="result">

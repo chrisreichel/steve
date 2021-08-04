@@ -32,7 +32,7 @@
 <form:form action="${ctxPath}/manager/settings" modelAttribute="settingsForm">
 
     <section><span>OCPP Settings</span></section>
-    <table class="table table-sm table-striped">
+    <table class="table table-sm ">
         <tr><td>Heartbeat Interval:</td><td>
             <form:input path="heartbeat"/>
         </td></tr>
@@ -56,7 +56,7 @@
             <span>Specify the recipients of the notifications by entering one e-mail address per line</span>
         </a>
     </span></section>
-    <table class="table table-sm table-striped">
+    <table class="table table-sm">
         <tr><td>Enable Notifications?:</td><td><form:checkbox path="enabled" cssClass="form-control form-control-sm"/></td></tr>
         <tr><td>Protocol:</td><td><form:input path="protocol" cssClass="form-control form-control-sm"/></td></tr>
         <tr><td>Host:</td><td><form:input path="host" cssClass="form-control form-control-sm"/></td></tr>
