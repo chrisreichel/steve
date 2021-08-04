@@ -70,10 +70,12 @@
         </thead>
         <tbody>
         <c:forEach items="${userList}" var="cr">
-            <tr><td><a href="${ctxPath}/manager/users/details/${cr.userPk}">${cr.userPk}</a></td>
+            <tr><td>
+                    <a class="btn btn-outline-primary" href="${ctxPath}/manager/users/details/${cr.userPk}">${cr.userPk}</a>
+                </td>
                 <td>
                     <c:if test="${not empty cr.ocppIdTag}">
-                        <a href="${ctxPath}/manager/ocppTags/details/${cr.ocppTagPk}">${cr.ocppIdTag}</a>
+                        <a class="btn btn-outline-secondary" href="${ctxPath}/manager/ocppTags/details/${cr.ocppTagPk}">${cr.ocppIdTag}</a>
                     </c:if>
                 </td>
                 <td>${cr.name}</td>

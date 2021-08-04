@@ -123,7 +123,7 @@
             </thead>
             <tbody>
             <c:forEach items="${cpList}" var="cp">
-                <tr><td><a href="${ctxPath}/manager/chargepoints/details/${cp.chargeBoxPk}">${cp.chargeBoxId}</a></td>
+                <tr><td><a class="btn btn-outline-primary btn-sm" href="${ctxPath}/manager/chargepoints/details/${cp.chargeBoxPk}">${cp.chargeBoxId}</a></td>
                     <td>${cp.description}</td>
                     <td>${cp.ocppProtocol}</td>
                     <td data-sort-value="${cp.lastHeartbeatTimestampDT.millis}">${cp.lastHeartbeatTimestamp}</td>

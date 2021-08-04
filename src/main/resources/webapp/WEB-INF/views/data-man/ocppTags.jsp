@@ -140,10 +140,10 @@
             <tbody>
             <c:forEach items="${ocppTagList}" var="item">
                 <tr>
-                    <td><a href="${ctxPath}/manager/ocppTags/details/${item.ocppTagPk}">${item.idTag}</a></td>
+                    <td><a class="btn btn-outline-primary btn-sm" href="${ctxPath}/manager/ocppTags/details/${item.ocppTagPk}">${item.idTag}</a></td>
                     <td>
                         <c:if test="${not empty item.parentIdTag}">
-                            <a href="${ctxPath}/manager/ocppTags/details/${item.parentOcppTagPk}">${item.parentIdTag}</a>
+                            <a class="btn btn-outline-primary btn-sm" href="${ctxPath}/manager/ocppTags/details/${item.parentOcppTagPk}">${item.parentIdTag}</a>
                         </c:if>
                     </td>
                     <td data-sort-value="${item.expiryDateDT.millis}">${item.expiryDate}</td>

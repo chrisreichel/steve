@@ -45,7 +45,7 @@
             <tr>
                 <td>Stations using this profile:</td>
                 <td>
-                    <a href="${ctxPath}/manager/chargingProfiles/assignments?chargingProfilePk=${form.chargingProfilePk}">ALL</a>
+                    <a class="btn btn-outline-primary btn-sm" href="${ctxPath}/manager/chargingProfiles/assignments?chargingProfilePk=${form.chargingProfilePk}">ALL</a>
                 </td>
             </tr>
             </tbody>

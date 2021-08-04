@@ -43,27 +43,27 @@
             <tr>
                 <td>Transactions:</td>
                 <td>
-                    <a class="alert-link" href="${ctxPath}/manager/transactions/query?chargeBoxId=${chargePointForm.chargeBoxId}&amp;type=ACTIVE">ACTIVE</a>
+                    <a class="btn btn-outline-secondary btn-sm" href="${ctxPath}/manager/transactions/query?chargeBoxId=${chargePointForm.chargeBoxId}&amp;type=ACTIVE">ACTIVE</a>
                      /
-                    <a class="alert-link" href="${ctxPath}/manager/transactions/query?chargeBoxId=${chargePointForm.chargeBoxId}&amp;type=ALL">ALL</a>
+                    <a class="btn btn-outline-secondary btn-sm" href="${ctxPath}/manager/transactions/query?chargeBoxId=${chargePointForm.chargeBoxId}&amp;type=ALL">ALL</a>
                 </td>
             </tr>
             <tr>
                 <td>Reservations:</td>
                 <td>
-                    <a class="alert-link" href="${ctxPath}/manager/reservations/query?chargeBoxId=${chargePointForm.chargeBoxId}&amp;periodType=ACTIVE">ACTIVE</a>
+                    <a class="btn btn-outline-secondary btn-sm" href="${ctxPath}/manager/reservations/query?chargeBoxId=${chargePointForm.chargeBoxId}&amp;periodType=ACTIVE">ACTIVE</a>
                 </td>
             </tr>
             <tr>
                 <td>Connector Status:</td>
                 <td>
-                    <a class="alert-link" href="${ctxPath}/manager/home/connectorStatus/query?chargeBoxId=${chargePointForm.chargeBoxId}">ALL</a>
+                    <a class="btn btn-outline-secondary btn-sm" href="${ctxPath}/manager/home/connectorStatus/query?chargeBoxId=${chargePointForm.chargeBoxId}">ALL</a>
                 </td>
             </tr>
             <tr>
                 <td>Charging Profiles:</td>
                 <td>
-                    <a class="alert-link" href="${ctxPath}/manager/chargingProfiles/assignments?chargeBoxId=${chargePointForm.chargeBoxId}">ALL</a>
+                    <a class="btn btn-outline-secondary btn-sm" href="${ctxPath}/manager/chargingProfiles/assignments?chargeBoxId=${chargePointForm.chargeBoxId}">ALL</a>
                 </td>
             </tr>
             </tbody>
