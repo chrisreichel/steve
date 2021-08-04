@@ -24,25 +24,23 @@
         <%@ include file="../snippets/sortable.js" %>
     });
 </script>
-<div class="content"><div>
-    <center>
-        <table id="details" class="cpd">
-            <thead><tr><th>Transaction Overview</th><th></th></tr></thead>
-            <tr><td>Transaction ID</td><td>${details.transaction.id}</td></tr>
-            <tr><td>ChargeBox ID</td><td><a href="${ctxPath}/manager/chargepoints/details/${details.transaction.chargeBoxPk}">${details.transaction.chargeBoxId}</a></td></tr>
-            <tr><td>Connector ID</td><td>${details.transaction.connectorId}</td></tr>
-            <tr><td>OCPP ID Tag</td><td><a href="${ctxPath}/manager/ocppTags/details/${details.transaction.ocppTagPk}">${details.transaction.ocppIdTag}</a></td></tr>
-            <tr><td>Start Date/Time</td><td>${details.transaction.startTimestamp}</td></tr>
-            <tr><td>Start Value</td><td>${details.transaction.startValue}</td></tr>
-            <tr><td>Stop Date/Time</td><td>${details.transaction.stopTimestamp}</td></tr>
-            <tr><td>Stop Value</td><td>${details.transaction.stopValue}</td></tr>
-            <tr><td>Stop Reason</td><td>${details.transaction.stopReason}</td></tr>
-            <tr><td>Stop Event Actor</td><td>${details.transaction.stopEventActor}</td></tr>
-        </table>
-    </center>
-    <br>
+
+    <table id="details" class="table table-sm">
+        <thead><tr><th>Transaction Overview</th><th></th></tr></thead>
+        <tr><td>Transaction ID</td><td>${details.transaction.id}</td></tr>
+        <tr><td>ChargeBox ID</td><td><a href="${ctxPath}/manager/chargepoints/details/${details.transaction.chargeBoxPk}">${details.transaction.chargeBoxId}</a></td></tr>
+        <tr><td>Connector ID</td><td>${details.transaction.connectorId}</td></tr>
+        <tr><td>OCPP ID Tag</td><td><a href="${ctxPath}/manager/ocppTags/details/${details.transaction.ocppTagPk}">${details.transaction.ocppIdTag}</a></td></tr>
+        <tr><td>Start Date/Time</td><td>${details.transaction.startTimestamp}</td></tr>
+        <tr><td>Start Value</td><td>${details.transaction.startValue}</td></tr>
+        <tr><td>Stop Date/Time</td><td>${details.transaction.stopTimestamp}</td></tr>
+        <tr><td>Stop Value</td><td>${details.transaction.stopValue}</td></tr>
+        <tr><td>Stop Reason</td><td>${details.transaction.stopReason}</td></tr>
+        <tr><td>Stop Event Actor</td><td>${details.transaction.stopEventActor}</td></tr>
+    </table>
+    <hr/>
     <section><span>Intermediate Meter Values</span></section>
-    <table class="res">
+    <table class="table table-sm">
         <thead>
         <tr>
             <th data-sort="date">Value Timestamp</th>
@@ -70,5 +68,5 @@
         </c:forEach>
         </tbody>
     </table>
-</div></div>
+
 <%@ include file="../00-footer.jsp" %>

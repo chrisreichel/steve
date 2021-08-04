@@ -36,7 +36,7 @@
     </a>
     </span></section>
     <div id="unknownTable" style="display: none">
-        <table class="res add-margin-bottom">
+        <table class="table table-sm">
             <thead>
             <tr>
                 <th data-sort="string">ChargeBox ID</th>

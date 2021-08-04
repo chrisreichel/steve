@@ -29,14 +29,15 @@
 </script>
 <div class="content">
     <div>
-    <section><span id="unknown" style="cursor: pointer">
-    Unknown Tags
-    <a class="tooltip" href="#"><img src="${ctxPath}/static/images/info.png" style="vertical-align:middle">
+        <section>
+            <span id="unknown" style="cursor: pointer">
+        Unknown Tags<a class="tooltip" href="#"><img src="${ctxPath}/static/images/info.png" style="vertical-align:middle">
         <span>A list of RFID tags that were used in authorization attempts but were not present in database.</span>
-    </a>
-    </span></section>
+        </a>
+        </span>
+        </section>
     <div id="unknownTable" style="display: none">
-        <table class="res add-margin-bottom">
+        <table class="table table-sm">
             <thead>
             <tr>
                 <th data-sort="string">ID Tag</th>

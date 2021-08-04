@@ -59,7 +59,7 @@
     </form:form>
     <br>
 
-    <table class="res" id="chargingProfileAssignmentTable">
+    <table class="table table-sm" id="chargingProfileAssignmentTable">
         <thead>
         <tr>
             <th data-sort="string">ChargeBox ID</th>

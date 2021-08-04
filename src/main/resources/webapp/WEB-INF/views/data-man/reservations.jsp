@@ -91,7 +91,7 @@
 	</form:form>
 	<br>
 
-<table class="res">
+<table class="table table-sm">
 	<thead>
 		<tr>
 			<th data-sort="int">Reservation ID</th>

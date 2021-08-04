@@ -62,7 +62,7 @@
 </table>
 <br><br>
 <section><span>Schedule Periods</span></section>
-<table class="res" id="periodsTable">
+<table class="table table-sm" id="periodsTable">
     <thead>
     <tr>
         <th>Start Period (in sec)</th>
