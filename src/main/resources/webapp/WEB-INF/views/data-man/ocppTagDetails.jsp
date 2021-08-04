@@ -43,15 +43,15 @@
         <tr>
             <td>Transactions:</td>
             <td>
-                <a href="${ctxPath}/manager/transactions/query?ocppIdTag=${ocppTagForm.idTag}&amp;type=ACTIVE">ACTIVE</a>
+                <a class="btn btn-outline-primary btn-sm" href="${ctxPath}/manager/transactions/query?ocppIdTag=${ocppTagForm.idTag}&amp;type=ACTIVE">ACTIVE</a>
                 /
-                <a href="${ctxPath}/manager/transactions/query?ocppIdTag=${ocppTagForm.idTag}&amp;type=ALL">ALL</a>
+                <a class="btn btn-outline-primary btn-sm" href="${ctxPath}/manager/transactions/query?ocppIdTag=${ocppTagForm.idTag}&amp;type=ALL">ALL</a>
             </td>
         </tr>
         <tr>
             <td>Reservations:</td>
             <td>
-                <a href="${ctxPath}/manager/reservations/query?ocppIdTag=${ocppTagForm.idTag}&amp;periodType=ACTIVE">ACTIVE</a>
+                <a class="btn btn-outline-primary btn-sm" href="${ctxPath}/manager/reservations/query?ocppIdTag=${ocppTagForm.idTag}&amp;periodType=ACTIVE">ACTIVE</a>
             </td>
         </tr>
         </tbody>

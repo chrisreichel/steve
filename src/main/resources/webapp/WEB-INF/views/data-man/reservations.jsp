@@ -110,7 +110,7 @@
 			<td>${res.id}</td>
 			<td>
 				<c:if test="${not empty res.transactionId}">
-					<a href="${ctxPath}/manager/transactions/query?type=ALL&transactionPk=${res.transactionId}">${res.transactionId}</a>
+					<a class="btn btn-outline-primary btn-sm" href="${ctxPath}/manager/transactions/query?type=ALL&transactionPk=${res.transactionId}">${res.transactionId}</a>
 				</c:if>
 			</td>
 			<td><a href="${ctxPath}/manager/ocppTags/details/${res.ocppTagPk}">${res.ocppIdTag}</a></td>
