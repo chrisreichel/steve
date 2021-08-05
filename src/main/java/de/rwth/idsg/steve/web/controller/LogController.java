@@ -21,6 +21,7 @@ package de.rwth.idsg.steve.web.controller;
 import de.rwth.idsg.steve.utils.LogFileRetriever;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -42,20 +43,19 @@ import java.util.Optional;
 public class LogController {
 
     @RequestMapping(value = "/log", method = RequestMethod.GET)
-    public void log(HttpServletResponse response) {
-        response.setContentType("text/plain");
-
-        try (PrintWriter writer = response.getWriter()) {
-            Optional<Path> p = LogFileRetriever.INSTANCE.getPath();
-            if (p.isPresent()) {
-                Files.lines(p.get(), StandardCharsets.UTF_8)
-                     .forEach(writer::println);
-            } else {
-                writer.write(LogFileRetriever.INSTANCE.getErrorMessage());
+    public String log(Model model) {
+        Optional<Path> p = LogFileRetriever.INSTANCE.getPath();
+        if (p.isPresent()) {
+            try {
+                model.addAttribute("logs", Files.readString(p.get(), StandardCharsets.UTF_8));
+            } catch (IOException e) {
+                log.error("Exception happened", e);
             }
-        } catch (IOException e) {
-            log.error("Exception happened", e);
         }
+        else {
+            model.addAttribute("logs", LogFileRetriever.INSTANCE.getErrorMessage());
+        }
+        return "logViewer";
     }
 
     public String getLogFilePath() {
