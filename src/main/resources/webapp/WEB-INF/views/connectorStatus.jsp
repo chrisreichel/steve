@@ -61,7 +61,7 @@ Connector Status
 </form:form>
 <br>
 
-<table class="res" id="connectorStatusTable">
+<table class="table table-sm" id="connectorStatusTable">
 	<thead>
 		<tr>
 			<th data-sort="string">ChargeBox ID</th>
@@ -74,7 +74,7 @@ Connector Status
 	<tbody>
 		<c:forEach items="${connectorStatusList}" var="cs">
 			<tr>
-				<td><a href="${ctxPath}/manager/chargepoints/details/${cs.chargeBoxPk}">${cs.chargeBoxId}</a></td>
+				<td><a class="btn btn-outline-primary btn-sm" href="${ctxPath}/manager/chargepoints/details/${cs.chargeBoxPk}">${cs.chargeBoxId}</a></td>
 				<td>${cs.connectorId}</td>
 				<td data-sort-value="${cs.statusTimestamp.millis}">${cs.timeStamp}</td>
 				<td>${cs.status}</td>

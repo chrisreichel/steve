@@ -80,7 +80,7 @@ Transactions
                 <td><form:input path="to" id="intervalPeriodTypeTo" cssClass="dateTimePicker"/></td>
             </tr>
             <tr>
-                <td>Get as CSV?:</td>
+                <td>Get as CSV?</td>
                 <td><form:checkbox path="returnCSV"/></td>
             </tr>
             <tr>
